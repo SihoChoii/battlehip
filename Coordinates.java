@@ -1,4 +1,27 @@
-public class Coordinates
+class Coordinates
 {
- // im
+    private int x,y;
+    
+    public Coordinates()
+    {
+        x = 0;
+        y = 0;
+    }
+    public Coordinates(int x, int y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getX() { return x; }
+    public int getY() { return y; }
+    public void setCoordinates(int x, int y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+    public String toString()
+    {
+        return "x = " + x + ", y = " + y;
+    }
 }
