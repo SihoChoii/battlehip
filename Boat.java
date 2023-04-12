@@ -34,7 +34,7 @@ abstract class Boat
         if (direction == 7) return "↖";
         return " ";
     }
-    public abstract String act(int choice, World world);
+    public abstract String act(int[] choices, World world);
     public abstract String getActions();
     public String move(World world)
     {
