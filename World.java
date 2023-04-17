@@ -23,9 +23,9 @@ class World
     }
     public boolean isLocationValid(Coordinates coordinates)
     {
-        if (coordinates.getX() > getWidth()) return false;
-        if (coordinates.getY() > getHeight()) return false;
-        return true;
+        if (coordinates.getX() >= 0 && coordinates.getX() < getWidth())
+            if (coordinates.getY() >= 0 && coordinates.getY() < getHeight()) return true;
+        return false;
     }
     public boolean isLocationOccupied(Coordinates coordinates)
     {
@@ -61,7 +61,7 @@ class World
         {
             for (int i = 0; i < map[0].length; i++)
             {
-                char letter = (char)('a'+i);
+                char letter = (char)('A'+i);
                 output += "\n" + letter + " ";
                 for (int j = 0; j < map.length; j++) output += "###";
             }
@@ -70,11 +70,15 @@ class World
         {
             for (int i = 0; i < map[0].length; i++)
             {
-                char letter = (char)('a'+i);
+                char letter = (char)('A'+i);
                 output += "\n" + letter + " ";
                 for (int j = 0; j < map.length; j++)
                 {
-                    if (map[i][j])
+                    if (map[j][i].getLocation() != null)
+                    {
+                        // output += map[i][j].getDirection() + "00";
+                    }
+                    else output += "###";
                 }
             }
         }
