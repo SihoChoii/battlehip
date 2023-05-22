@@ -33,7 +33,7 @@ public class BoatRunner extends Boat{
         BoatRunner[] barray = new BoatRunner[2];
         barray[0] = new BoatRunner(1, new Coordinates(3,3), 2, 9, 5, 6);
         barray[1] = new BoatRunner(1, new Coordinates(2,2), 2, 9, 5, 6);
-        String map1 = w.drawTeamMap(barray, 2);
+        String map1 = w.drawTeamMap(barray, 1);
         System.out.println(map1);
     }
 }

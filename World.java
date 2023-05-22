@@ -76,7 +76,7 @@ class World
                 {
                     if (map[j][i].getLocation() != null)
                     {
-                        // output += map[i][j].getDirection() + "00";
+                        output += map[j][i].getDirection() + map[j][i].getID();
                     }
                     else output += "###";
                 }
